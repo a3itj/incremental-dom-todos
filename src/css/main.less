@@ -1,0 +1,82 @@
+.todo,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: #4d4d4d;
+}
+#app {
+    padding: 10px;
+}
+.todo {
+    list-style-type: none;
+    &__input {
+        padding: 10px 0;
+    }
+    &__item {
+        border-bottom: 1px solid #ededed;
+        &__label {
+            padding: 10px 0;
+            display: block;
+        }
+        &--done {
+            text-decoration: line-through;
+            color: #d9d9d9;
+        }
+    }
+    &__checkbox {
+        margin-right: 10px;
+    }
+    &__filter {
+        position: relative;
+        z-index: 2;
+        &__item {
+            margin-left: 10px;
+        }
+    }
+}
+.todo__filter #addTodo {
+    margin-left: 10px;
+}
+.todo-container {
+    width: 400px;
+    padding: 20px 0;
+    border: 1px solid #ededed;
+    margin: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.todo-container:before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+.todo__input__field {
+    width: 250px;
+    height: 23px;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    padding: 2px 5px;
+}
+.todo__action--add {
+    background-color: #3cb878;
+    border: 1px solid #3cb878;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 16px;
+    width: 60px;
+    line-height: 23px;
+    cursor: pointer;
+    width: 100px;
+    line-height: 28px;
+}

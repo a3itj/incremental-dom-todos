@@ -1,4 +1,3 @@
-
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -36,7 +35,7 @@ module.exports = {
 			}
 		}, {
 			loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!less'),
-			test: /\.css$/,
+			test: /\.less$/,
 			include: [path.resolve(__dirname, 'src', 'css')]
 		}]
 	}
